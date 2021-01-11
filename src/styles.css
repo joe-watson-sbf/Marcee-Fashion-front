@@ -1,1 +1,324 @@
-/* You can add global styles to this file, and also import other style files */
+/*Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato&family=Roboto&family=Sofia&display=swap');
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'Gugi', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Sofia', cursive;
+*/
+:root{
+    --primary-color: #000330;
+    --light-gray:#2b3032a1;
+    --border:#2b303218;
+    --text-color:#ff686b;
+    --roboto:'Roboto', sans-serif;
+    --gugi:'Gugi', cursive;
+    --sofia: 'Sofia', cursive;
+}
+
+.primary-color{
+    color:var(--primary-color); 
+}
+
+.bg-primary-color{
+    background-color: var(--primary-color)!important;
+}
+.text-color{
+    color:var(--text-color)
+}
+.font-roboto{
+    font-family: var(--roboto);
+}
+.lightblue{
+    color:var(--light-gray)
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+	font-family: var(--roboto);
+	width: 100%;
+	height: 1080vh;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header{
+    background-color: var(--primary-color);
+    font-family: var(--roboto);
+}
+header .site-title{
+    font-family: var(--gugi);
+}
+.container .dropdown-toggle,
+.container .dropdown-item{
+    font-size:0.7em;
+}
+
+.header-links a{
+    opacity: 0.7;
+    margin-right: 0.5rem !important;
+    font-size:0.9em;
+    text-decoration: none;
+    color:white;
+}
+.header-links a:hover {
+    opacity: 1;
+	background-color: whitesmoke;
+}
+.nav-item:hover{
+	cursor: pointer;
+}
+/* NAVIGATION MENU */
+
+.navbar-nav{
+    padding: 0.8em 0em;
+}
+
+.navbar-nav .nav-link{
+    font-size: 0.9em;
+    color: var(--light-gray)!important;
+}
+
+.navbar-nav .nav-item .nav-link{
+    padding:0 1.3em;
+}
+
+
+
+.navbar-nav .basket-icon{
+    margin-right: 0.5rem !important;
+}
+.navbar-nav .seach-icon{
+    margin-right: 0.5rem !important;
+}
+.navbar-nav .user-icon{
+    margin-right: 0.5rem !important;
+}
+.p-2:hover{
+    cursor: pointer;
+}
+
+.container{
+    max-height: 15vh !important;
+}
+
+
+
+/* Slider-One*/
+.site-slider{
+    position: relative;
+}
+.position-top{
+    position:absolute;
+    top:50%;
+}
+.site-slider .slider-btn .prev,
+.site-slider .slider-btn .next{
+    background-color: var(--primary-color);
+    padding: 1rem 1.5rem;
+    border-radius:10rem;
+    color:white;
+    margin: 0 1rem;
+    opacity:0;
+    transition: opacity 1s ease;
+}
+
+.site-slider:hover .slider-btn .prev,
+.site-slider:hover .slider-btn .next{
+    opacity:1;
+}
+
+.right-0{
+    right: 0;
+}
+
+
+.site-slider-two{
+    position:relative;
+    height: 30%;
+}
+.site-slider-two .products{
+    height: 25rem;
+    position:relative;
+    overflow: hidden;
+}
+
+.site-slider-two .products img{
+    width: 90%;
+    margin: auto;
+}
+
+.site-btn .btn-span{
+    padding:0.8rem 1.9rem;
+    border-radius: 4rem;
+    border: 1px solid var(--border);
+    background-color: white;
+    color: var(--light-gray);
+}
+
+.slider-two .slick-track .products:hover span{
+    background-color: var(--primary-color);
+}
+
+
+
+/* PRODUCT CARD */
+
+
+.card-product{
+	width: 300px;
+	height: 400px;
+	background: #f4f4f4;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0;
+	transform: scale(0.95);
+	transition: box-shadow .5s ease-in-out,
+				transform .5s ease-in-out;
+	overflow: hidden;
+}
+.card-product:hover{
+	transform: scale(1);
+	box-shadow: 5px 20px 30px rgba(0,0,0,.2);
+}
+.card-product .imgBox{
+	width: 100%;
+	height: 80%;
+	overflow: hidden;
+}
+.card-product img{
+	width: 100%;
+	height: 100%;
+}
+.card-product .details{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	background: #f4f4f4be;
+	padding: 10px 20px;
+	bottom: -30%;
+	transition: .5s;
+}
+.card-product .details:hover{
+	bottom: 0;
+}
+.card-product .textContent{
+	position: relative;
+	margin-top: 10px;
+	color: #555;
+}
+.card-product h3{
+	font-size: 20px;
+    padding: 5px 0;
+    font: bold;
+}
+.card-product .price{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 30px;
+}
+.card-product h4{
+	font-size: 18px;
+	margin-top: 15px;
+	padding: 10px 0;
+	font-weight: bold;
+	color: #555;
+}
+.card-product ul{
+	display: flex;
+}
+.card-product ul li{
+	list-style: none;
+	width: 15px;
+	height: 15px;
+	margin: 5px;
+	cursor: pointer;
+}
+.card-product ul li:nth-child(1){
+	background: #00f;
+}
+.card-product ul li:nth-child(2){
+	background: #f00;
+}
+.card-product ul li:nth-child(3){
+	background: #0ff;
+}
+.card-product ul li:nth-child(4){
+	background: #ff0;
+}
+.card-product ul li:nth-child(5){
+	background: #f0f;
+}
+.card-product button{
+	width: 100%;
+	padding: 5px 0;
+	margin: 10px 0;
+	background: var(--light-gray);
+	color: #fff;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.card-product button:hover{
+	background: var(--primary-color);
+}
+.description{
+    
+	background: var(--light-gray );
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	top: -70px;
+	right: -70px;
+	border-radius: 0 0 200px 200px;
+	transition: all .5s, border-radius 1s, top 1s;
+}
+.description .icon{
+	position: absolute;
+	top: 85px;
+	right: 90px;
+	color: #fff;
+	opacity: 1;
+}
+.description:hover{
+    background: var(--primary-color);
+    overflow-y: auto;
+	width: 100%;
+	height: 80%;
+	right: 0;
+	top: 0;
+	border-radius: 0;
+	text-align: center;
+}
+.description:hover .icon{
+	opacity: 0;
+}
+.description .contents{
+	color: #fff;
+	padding: 5%;
+	transform: scale(0.5);
+	transform: translateY(-200%);
+	transition: opacity .2s, transform .8s;
+	opacity: 0;
+}
+.description:hover .contents{
+	transform: scale(1);
+	opacity: 1;
+	transform: translateY(0);
+}
+.description h2{
+	margin: 20px 0;
+	text-align: center;
+}
+
+
+/* /PRODUCT CARD */
